@@ -55,3 +55,69 @@ button {
     color: white;
     border-color: white;
 }
+.formulario-entrada {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.formulario-entrada input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: #2F0F5D;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+
+.formulario-entrada .lblTexto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #0EA293;
+}
+
+.formulario-entrada .lblTexto:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid #27E1C1;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.spanTexto {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #0EA293;
+
+}
+
+a {
+    text-decoration: underline transparent;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, #2F0F5D, #27E1C1);
+    border-image-slice: 1;
+}
+
+.formulario-entrada input:focus+.lblTexto .spanTexto,
+.formulario-entrada input:valid+.lblTexto .spanTexto {
+    transform: translateY(-210%);
+    font-size: 16px;
+    color: #27E1C1;
+}
+
+.formulario-entrada input:focus+.lblTexto:after,
+.formulario-entrada input:valid+.lblTexto:after {
+    transform: translateX(0%);
+}
