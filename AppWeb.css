@@ -121,3 +121,17 @@ a {
 .formulario-entrada input:valid+.lblTexto:after {
     transform: translateX(0%);
 }
+.pass{
+width:40px;
+height: 40px;
+background-image: url(img/sinojo.png);
+background-size: 40px 40px;
+}
+.pass:active  {
+background-image: url(img/ojo.png);
+transition: all 0.3s ease;
+background-size: 40px 40px;
+}
+
+
+
